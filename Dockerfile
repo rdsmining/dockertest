@@ -1,4 +1,4 @@
-FROM arm64v8/debian:stable
+FROM amd64/debian:stable
 
 # COPY . . 
 
