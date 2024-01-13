@@ -93,7 +93,7 @@ RUN set -eux \
 #  && echo "Installing supervisor" \
 #    && python3 -m pip install --default-timeout=1000 --upgrade --no-cache-dir supervisor==4.2.5
 
-# EXPOSE 8120
+EXPOSE 8120
 
 
 #RUN set -eux \
