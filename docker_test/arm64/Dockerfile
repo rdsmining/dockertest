@@ -1,6 +1,6 @@
 FROM arm64v8/debian:stable
 
-COPY . . 
+# COPY . . 
 
 WORKDIR /app
 
