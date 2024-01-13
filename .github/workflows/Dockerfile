@@ -2,7 +2,7 @@ FROM arm64v8/debian:stable
 
 # COPY . . 
 
-WORKDIR /app
+# WORKDIR /app
 
 # ARG applist1=nmap
 
