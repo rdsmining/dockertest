@@ -1,4 +1,4 @@
-FROM armv7/debian:stable
+FROM arm32v7/debian:stable
 
 ENV PATHONE=/home/one
 
