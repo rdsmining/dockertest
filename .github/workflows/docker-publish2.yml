@@ -11,7 +11,7 @@ on:
   push:
     branches: [ "arm64" ]
     # Publish semver tags as releases.
-    tags: [ 'v*.*.*' ]
+    tags: [ 'armv*.*.*' ]
   pull_request:
     branches: [ "arm64" ]
 
