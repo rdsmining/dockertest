@@ -1,4 +1,4 @@
-FROM linux/amd64:stable
+FROM linux/arm64:stable
 
 COPY . . 
 
