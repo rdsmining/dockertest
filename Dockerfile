@@ -51,7 +51,7 @@ ARG RUNTIME_PACKAGES="\
 #  libzbar0 \
   poppler-utils"
 
-UN set -eux \
+RUN set -eux \
   echo "Installing system packages" \
     && apt-get update \
     && apt-get install --yes --quiet --no-install-recommends ${RUNTIME_PACKAGES}
