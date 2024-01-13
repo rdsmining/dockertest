@@ -4,7 +4,7 @@ COPY . .
 
 WORKDIR /app
 
-ARG applist1=nmap
+# ARG applist1=nmap
 
 RUN apt update && apt install iputils-ping -y
 
@@ -90,3 +90,24 @@ UN set -eux \
 #    && python3 -m pip install --default-timeout=1000 --upgrade --no-cache-dir supervisor==4.2.5
 
 # EXPOSE 8000
+
+
+#RUN set -eux \
+#  && echo "Setting up user/group" \
+#    && addgroup --gid 1000 paperless \
+#    && useradd --uid 1000 --gid paperless --home-dir /usr/src/paperless paperless \
+#  && echo "Creating volume directories" \
+#    && mkdir --parents --verbose /usr/src/paperless/data \
+#    && mkdir --parents --verbose /usr/src/paperless/media \
+#    && mkdir --parents --verbose /usr/src/paperless/consume \
+#    && mkdir --parents --verbose /usr/src/paperless/export \
+#  && echo "Adjusting all permissions" \
+#    && chown --from root:root --changes --recursive paperless:paperless /usr/src/paperless \
+#  && echo "Collecting static files" \
+#    && gosu paperless python3 manage.py collectstatic --clear --no-input --link \
+#    && gosu paperless python3 manage.py compilemessages
+
+# VOLUME ["/usr/src/paperless/data", \
+#         "/usr/src/paperless/media", \
+#         "/usr/src/paperless/consume", \
+#         "/usr/src/paperless/export"]
