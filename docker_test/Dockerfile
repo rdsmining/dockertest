@@ -1,6 +1,6 @@
-FROM linux/amd64:stable
+FROM arm64v8/debian:stable
 
-COPY . . 
+# COPY . . 
 
 WORKDIR /app
 
@@ -49,12 +49,12 @@ ARG RUNTIME_PACKAGES="\
 #  zlib1g \
   # Barcode splitter
 #  libzbar0 \
-#  poppler-utils"
+  poppler-utils"
 
 UN set -eux \
   echo "Installing system packages" \
     && apt-get update \
-    && apt-get install --yes --quiet --no-install-recommends ${RUNTIME_PACKAGES} \
+    && apt-get install --yes --quiet --no-install-recommends ${RUNTIME_PACKAGES}
 #    && echo "Installing pre-built updates" \
 #      && echo "Installing qpdf ${QPDF_VERSION}" \
 #        && curl --fail --silent --show-error --location \
