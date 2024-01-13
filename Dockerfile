@@ -95,7 +95,6 @@ RUN set -eux \
 
 EXPOSE 8120
 
-
 #RUN set -eux \
 #  && echo "Setting up user/group" \
 #    && addgroup --gid 1000 paperless \
