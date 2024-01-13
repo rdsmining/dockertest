@@ -1,5 +1,9 @@
 FROM amd64/debian:stable
 
+ENV PATHONE=/home/one
+
+ENV PATHTWO=/home/two
+
 COPY . . 
 
 WORKDIR /app
