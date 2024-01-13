@@ -6,7 +6,7 @@ WORKDIR /app
 
 # ARG applist1=nmap
 
-RUN apt update && apt install iputils-ping -y
+# RUN apt update && apt install iputils-ping -y
 
 ARG RUNTIME_PACKAGES="\
   # General utils
