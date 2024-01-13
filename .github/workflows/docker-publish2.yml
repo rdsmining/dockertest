@@ -19,13 +19,13 @@ env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: rdsmining/dockertest
+  IMAGE_NAME: rdsmining/dockertestarm
 
 
 jobs:
   build:
 
-    runs-on: self-hosted
+    runs-on: raspberrypi
     permissions:
       contents: read
       packages: write
