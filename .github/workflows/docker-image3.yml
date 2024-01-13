@@ -11,6 +11,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:      
+      DOCKER_IMAGE: arm32v7/debian:stable      
+      DOCKER_TARGET_PLATFORM: linux/arm/v7    
 
     steps:
     - uses: actions/checkout@v3
